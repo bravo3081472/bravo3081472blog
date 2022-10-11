@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -9,22 +9,54 @@
 
 
 
+    <meta name="description" content="韓智傑資訊管理系大學畢業，目前正在學習前端工程。
+學歷
+資訊管理系 學士（2010&amp;#x2F;06 - 2014&amp;#x2F;06）
+
+
+研究領域
+前端動畫效果
+Vue.js JavaScript 框架
+
+
+
+    .card-text {
+      font-size: 1rem;
+    }
+"/>
+
 
 <!--Author-->
 
-    <meta name="author" content="John Doe"/>
+    <meta name="author" content="ZHI-JIE,HAN"/>
 
 
 <!--Open Graph Title-->
 
-    <meta property="og:title" content="About"/>
+    <meta property="og:title" content="About Me"/>
 
 
 <!--Open Graph Description-->
 
+    <meta property="og:description" content="韓智傑資訊管理系大學畢業，目前正在學習前端工程。
+學歷
+資訊管理系 學士（2010&amp;#x2F;06 - 2014&amp;#x2F;06）
+
+
+研究領域
+前端動畫效果
+Vue.js JavaScript 框架
+
+
+
+    .card-text {
+      font-size: 1rem;
+    }
+"/>
+
 
 <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:site_name" content="前端筆記"/>
 
 <!--Type page-->
 
@@ -47,7 +79,7 @@
 
 <!-- Title -->
 
-<title>About | Hexo</title>
+<title>About Me | 前端筆記</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
@@ -96,7 +128,7 @@
     <div class="container pl-0 pr-0">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <a class="navbar-brand text-white p-1 pl-3" href="/bravo3081472blog/">Hexo</a>
+            <a class="navbar-brand text-white p-1 pl-3" href="/bravo3081472blog/">前端筆記</a>
         </div>
         <div class="navbar-nav float-right">
             <button class="btn btn-link search-btn navbar-item" data-toggle="modal" data-target="#searchModal">
@@ -109,15 +141,13 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in your post front-matter: cover -->
-
+<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/bravo3081472blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 text-center">
-                <div class="post-heading text-white">
-                    <h1>About</h1>
-                    
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <div class="site-heading text-center text-white">
+                    <h1>About Me</h1>
                 </div>
             </div>
         </div>
@@ -125,76 +155,161 @@
 </header>
 
 <!-- Post Content -->
-<article>
+<article class="about-page">
     <div class="container">
         <div class="row">
             <!-- Post Main Content -->
             <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                
-                
+                <h2 id="韓智傑"><a href="#韓智傑" class="headerlink" title="韓智傑"></a>韓智傑</h2><p>資訊管理系大學畢業，目前正在學習前端工程。</p>
+<div class="card bg-default  my-3"><div class="card-header"><p><strong>學歷</strong></p></div><div class="card-body"><ul>
+<li>資訊管理系 學士（2010&#x2F;06 - 2014&#x2F;06）</li>
+</ul></div></div>
+
+<div class="card bg-default  my-3"><div class="card-header"><p><strong>研究領域</strong></p></div><div class="card-body"><ul>
+<li>前端動畫效果</li>
+<li>Vue.js JavaScript 框架</li>
+</ul></div></div>
+
+<style>
+    .card-text {
+      font-size: 1rem;
+    }
+    .skills-title {
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 800;
+    }
+</style>
+
+<div class="card bg-default  my-3"><div class="card-header"><p><strong>專案</strong></p></div><div class="card-body"><ul>
+<li><a href="https://github.com/bravo3081472/Vue-Cake" target="_blank" rel="noopener"><strong>購物網站-蛋糕</strong></a> - 使用 Vue.js 撰寫的</li>
+<li><a href="https://github.com/luswdev/mini-cloud-system" target="_blank" rel="noopener"><strong>Mini Cloud system</strong></a> - 一個用 PHP + MySQL 打造的簡易雲端</li>
+</ul></div></div>
+
+<div class="card bg-default  my-3">
+    <div class="card-header">
+        <strong>專案</strong>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <span class="h4">購物網站-蛋糕</span>
+            <div class="row mt-3">
+              <div class="col">
+                <img src="../image/caketest_products.jpg">
+              </div>
+              <div class="col-3">
+                <img src="../image/caketest_products_rwd.jpg">
+              </div>
             </div>
+            <div class="card">
+              <div class="card-header">
+                <span class="h5">主要功能</span>
+              </div>
+              <div class="card-body">
+                <ul class="card-text">
+                  <li>1. 撈取 API 商品資料，並根據 API 商品資料是否啟用來決定商品是否上架</li>
+                  <li>2. 購買商品可以加入優惠碼決定是否打折</li>
+                  <li>3. 將商品加入購物車，購物車結帳後會列出清單填寫收寄人資訊</li>
+                  <li>4. 根據帳號系統管控是否加入管理者頁面</li>
+                  <li>5. 管理者頁面可以新增、編輯、刪除商品跟優惠碼，並查閱所有的訂單資訊</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <span class="h5">開發部分</span>
+              </div>
+              <div class="card-body">
+                <ul class="card-text">
+                  <li>資料庫：主要是使用六角學院提供的 RESTful API，並使用 AJAX 串接</li>
+                  <li>CSS：主要使用 Bootstrap，並以此為基礎對於細節及 RWD 加上自己寫的 SCSS</li>
+                  <li>為了跟 Bootstrap 命名分開，CSS 命名使用 BEM 方式命名</li>
+                  <li>JavaScript：使用 Vue-Cli 網站架構，框架使用 Vue.js，路由是使用 Vue-Router</li>
+                  <li>註解部分加入 JSdoc</li>
+                  <li>獨立開發</li>
+                  <li>開發時間：1~2個月，中間有重構過網站，主要是增加新功能並將分散的 CSS 集中管理</li>
+                </ul>
+              </div>
+            </div>
+        </li>
+    </ul>
+</div>
 
-            <!-- Post information -->
-            
-            
+<div class="card bg-default  my-3"><div class="card-header"><p><strong>經歷</strong></p></div><div class="card-body"><ul>
+<li><strong>2016.03</strong> - 就業於祥茂光電(行政助理)</li>
+<li><strong>2020.01</strong> - 祥茂光電離職，轉換跑道</li>
+<li><strong>2020.04</strong> - 開始全職學習前端工程，並加入六角學院線上學習</li>
+<li><strong>2020.07</strong> - 經濟問題，就職皇陞金屬(組裝員)，下班學習</li>
+<li><strong>2022.04</strong> - 皇陞金屬離職，全職學習並準備作品集</li>
+<li><strong>2022.10</strong> - 建立此網頁記錄學習筆記</li>
+</ul></div></div>
 
-            
-                <!-- Comments -->
-                
+<div class="card bg-default  my-3">
+    <div class="card-header">
+        <strong>Skills</strong>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <span class="skills-title">HTML</span>
+          <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+        <li class="list-group-item">
+          <span class="skills-title">CSS / Sass / Scss</span>
+          <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+        <li class="list-group-item">
+          <span class="skills-title">Bootstrap</span>
+          <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <span class="skills-title">JavaScript</span>
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <span class="skills-title">JQuery</span>
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <span class="skills-title">Vue.js</span>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <span class="skills-title">Vue-Cli</span>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <span class="skills-title">Vue-Router</span>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 45%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </li>
+    </ul>
+</div>
 
-                
-
-            
-
+<script>
+  // let collapseToggle = document.querySelector('div[data-target="#collapse"]')
+  // let collapseText = document.querySelector('div[data-parent="#accordionExample"]')
+  // collapseToggle.addEventListener('click',function(e) {
+  //   collapseText.classList.toggle('test')
+  // },false)
+</script>
+            </div>
         </div>
     </div>
-</article> 
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-    <style>
-        #toc-content .toc-link::before {
-            background-color: transparent;
-            max-height: 25px;
-        }
-
-        #toc-content .toc-link.is-active-link::before {
-            background-color: #404040;
-        }
-    </style>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-    <div class="ui-toc dropup scrollspy-body pull-right" style="right: 3%;">
-        <button type="button" class="toc-btn btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-            <i class="fas fa-list"></i>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right p-2"  aria-labelledby="tocLabel">
-            <div class="toc-widget">
-                <div id="toc-content" class="text-truncate">
-                </div>
-            </div>
-            <div class="toc-menu pt-3 pl-4">
-                <a class="expand-toggle d-block py-1" href="#"><span class="expand-text">Expand all</span><span class="close-text" style="display: none;">Collapse all</span></a>
-                <a class="back-to-top d-block py-1" href="#">Back to top</a>
-                <a class="go-to-bottom d-block py-1" href="#">Go to bottom</a>
-            </div>
-        </div>
-    </div>
-    <script>
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '#toc-content',
-            // Where to grab the headings to build the table of contents.
-            contentSelector: 'article',
-            // Which headings to grab inside of the contentSelector element.
-            headingSelector: 'h1, h2, h3',
-            // For headings inside relative or absolute positioned containers within content.
-            hasInnerContainers: true,
-        });
-    </script>
-
-
-    
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -281,7 +396,7 @@
                 </ul>
                 <p class="copyright footer-author">
                     &copy; -2022 
-                    <a rel="external" class="copyright-link" href="" target="_blank">John Doe</a><br/>
+                    <a rel="external" class="copyright-link" href="" target="_blank">ZHI-JIE,HAN</a><br/>
                     Powered by <a rel="external" class="copyright-link" href="https://hexo.io/" target="_blank">Hexo</a>  
                     <span class="copyright-split">&nbsp;|&nbsp;&nbsp;</span>
                     Theme <a rel="external" class="copyright-link" href="https://github.com/luswdev/hexo-theme-clean.git" target="_blank">Clean</a>
@@ -330,7 +445,7 @@
     <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content overflow-auto">
             <div class="modal-header">
-                <input type="text" class="form-control" placeholder="Searching Keywords..." id="searchInput">
+                <input type="text" class="form-control" placeholder="搜尋關鍵字..." id="searchInput">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
