@@ -9,7 +9,16 @@
 
 
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in "/>
+    <meta name="description" content="螢光方塊滾動效果Animation-effect-001
+
+
+本章重點
+滾動效果
+
+
+原理是使用 transform 的 rotate 旋轉效果做到滾動
+設定旋轉角度 transform-origin: bottom right; 由右下旋轉
+使用 animation: animateSurface"/>
 
 
 <!--Author-->
@@ -19,12 +28,21 @@
 
 <!--Open Graph Title-->
 
-    <meta property="og:title" content="hello"/>
+    <meta property="og:title" content="螢光方塊滾動效果"/>
 
 
 <!--Open Graph Description-->
 
-    <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in "/>
+    <meta property="og:description" content="螢光方塊滾動效果Animation-effect-001
+
+
+本章重點
+滾動效果
+
+
+原理是使用 transform 的 rotate 旋轉效果做到滾動
+設定旋轉角度 transform-origin: bottom right; 由右下旋轉
+使用 animation: animateSurface"/>
 
 
 <!--Open Graph Site Name-->
@@ -51,7 +69,7 @@
 
 <!-- Title -->
 
-<title>hello | 前端筆記</title>
+<title>螢光方塊滾動效果 | 前端筆記</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
@@ -120,7 +138,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 text-center">
                 <div class="post-heading text-white">
-                    <h1>hello</h1>
+                    <h1>螢光方塊滾動效果</h1>
                     
                 </div>
             </div>
@@ -140,7 +158,7 @@
         <i class="far fa-bookmark fa-fw"></i>
         
 
-<a href="/bravo3081472blog/categories/Diary/">Diary</a>
+<a href="/bravo3081472blog/categories/%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C/">動畫效果</a>
 
     
     
@@ -158,7 +176,37 @@
     
 </span>  
                 
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+                <h1 id="螢光方塊滾動效果"><a href="#螢光方塊滾動效果" class="headerlink" title="螢光方塊滾動效果"></a>螢光方塊滾動效果</h1><div class="img-item" data-src="/bravo3081472blog/img/Animation-effect/Animation-effect-001.jpg" data-sub-html=".caption"><img src="/bravo3081472blog/img/Animation-effect/Animation-effect-001.jpg" class="" title="Animation-effect-001" alt="Animation-effect-001"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">Animation-effect-001</span></div></div>
+
+<hr>
+<h2 id="本章重點"><a href="#本章重點" class="headerlink" title="本章重點"></a>本章重點</h2><ol>
+<li><strong>滾動效果</strong></li>
+</ol>
+<ul>
+<li>原理是使用 <code>transform</code> 的 <code>rotate</code> 旋轉效果做到滾動</li>
+<li>設定旋轉角度 <code>transform-origin: bottom right;</code> 由右下旋轉</li>
+<li>使用 <code>animation: animateSurface 1.5s ease-in-out infinite;</code> 每 1.5s 觸發動畫 </li>
+<li>使用 <code>@keyframes</code> 設置動畫，每 1.5s，使用 <code>transform: rotate();</code> 將 .cube 往右旋轉<br>– <strong>P.S</strong> - 旋轉角度 90度，可自行設定動畫細節，決定到百分之幾完全轉到 90度</li>
+</ul>
+<ol start="2">
+<li><strong>原地滾動效果</strong></li>
+</ol>
+<ul>
+<li>使用 <code>animation: animateSurface 1.5s ease-in-out infinite;</code> 每 1.5s 觸發動畫</li>
+<li>使用 <code>@keyframes</code> 設置動畫，每 1.5s，使用 <code>transform: translateX(-200px);</code> 將 .box 往後推 -200px</li>
+<li><strong>P.S</strong> - .box 記得要將使用 <code>width: calc(100% + 400px);</code> 將寬度加回去，因為置中 <code>left: -200px;</code> 跟動畫位移 <code>translateX(-200px)</code></li>
+</ul>
+<hr>
+<h2 id="結構介紹"><a href="#結構介紹" class="headerlink" title="結構介紹"></a>結構介紹</h2><ul>
+<li><strong>.container</strong> - 動畫區塊，並且將整個畫面傾斜用</li>
+<li><strong>.box</strong> - 反射層，用來反射方塊，並且將畫面推移做到原地滾動的效果</li>
+<li><strong>.cube</strong> - 滾動方塊，產生螢光效果，並且由右下開始旋轉，做到滾動效果</li>
+</ul>
+<hr>
+<h2 id="完整程式碼如下"><a href="#完整程式碼如下" class="headerlink" title="完整程式碼如下"></a>完整程式碼如下</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cube"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">35deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="comment">/* 滾動方塊置中 */</span></span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="comment">/* 因為置中已經推了 -200px，原地滾動時還會再推 -200px  */</span></span><br><span class="line">  <span class="comment">/* 所以寬度還要加回 400px */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">100%</span> + <span class="number">400px</span>);</span><br><span class="line">  <span class="comment">/* 反射效果 */</span></span><br><span class="line">  <span class="attribute">-webkit-box-reflect</span>: below <span class="number">1px</span> <span class="built_in">linear-gradient</span>(transparent, #<span class="number">0004</span>);</span><br><span class="line">  <span class="attribute">animation</span>: animateSurface <span class="number">1.5s</span> ease-in-out infinite;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 方塊往前滾的同時，推動畫面 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> animateSurface &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0px</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">200px</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.box</span> <span class="selector-class">.cube</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#03e9f4</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">3</span>, <span class="number">233</span>, <span class="number">244</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="number">0</span> <span class="number">0</span> <span class="number">25px</span> <span class="built_in">rgba</span>(<span class="number">3</span>, <span class="number">233</span>, <span class="number">244</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="number">0</span> <span class="number">0</span> <span class="number">50px</span> <span class="built_in">rgba</span>(<span class="number">3</span>, <span class="number">233</span>, <span class="number">244</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="number">0</span> <span class="number">0</span> <span class="number">100px</span> <span class="built_in">rgba</span>(<span class="number">3</span>, <span class="number">233</span>, <span class="number">244</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="number">0</span> <span class="number">0</span> <span class="number">200px</span> <span class="built_in">rgba</span>(<span class="number">3</span>, <span class="number">233</span>, <span class="number">244</span>, <span class="number">0.5</span>),</span><br><span class="line">  <span class="number">0</span> <span class="number">0</span> <span class="number">300px</span> <span class="built_in">rgba</span>(<span class="number">3</span>, <span class="number">233</span>, <span class="number">244</span>, <span class="number">0.5</span>);</span><br><span class="line">  <span class="comment">/* 從右下方向旋轉 */</span></span><br><span class="line">  <span class="attribute">transform-origin</span>: bottom right;</span><br><span class="line">  <span class="attribute">animation</span>: animater <span class="number">1.5s</span> ease-in-out infinite;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 旋轉動畫 */</span></span><br><span class="line"><span class="keyword">@keyframes</span> animater &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">0deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  60% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">90deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/* 也可以根據需求做的更細緻 */</span></span><br><span class="line">  <span class="comment">/* 65% &#123;</span></span><br><span class="line"><span class="comment">    transform: rotate(85deg);</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">  70% &#123;</span></span><br><span class="line"><span class="comment">    transform: rotate(90deg);</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">  75% &#123;</span></span><br><span class="line"><span class="comment">    transform: rotate(85deg);</span></span><br><span class="line"><span class="comment">  &#125; */</span></span><br><span class="line">  80%,100% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">90deg</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
             </div>
 
@@ -171,7 +219,7 @@
             
             
         
-            <a href="/bravo3081472blog/tags/PS3/">#PS3</a> <a href="/bravo3081472blog/tags/Games/">#Games</a>
+            <a href="/bravo3081472blog/tags/HTML/">#HTML</a> <a href="/bravo3081472blog/tags/CSS/">#CSS</a> <a href="/bravo3081472blog/tags/SASS/">#SASS</a>
         
     </div>
 
